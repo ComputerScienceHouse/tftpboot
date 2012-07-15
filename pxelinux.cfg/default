@@ -1,0 +1,34 @@
+# the default menu. menu.c32 is nice, but vesamenu.c32 is much nicer. 
+default vesamenu.c32
+# this will set the prompt to start at the first item
+prompt 0
+
+# set the menu title
+menu title CSH PXE Boot server
+
+# use the following graphics.conf file to make it look nicer
+menu INCLUDE pxelinux.cfg/graphics.conf
+
+menu autoboot Booting from local system in # seconds
+
+label bootlocal
+	menu label ^Boot from Local System
+	menu default
+	localboot 0
+	timeout 300
+	TOTALTIMEOUT 9001
+
+label x86systems
+	menu label x86 (^32 bit systems)
+	kernel vesamenu.c32
+	append pxelinux.cfg/graphics.conf pxelinux.cfg/x86_systems.menu
+
+label x8664systems
+	menu label x86_64 (^64 bit systems)
+	kernel vesamenu.c32
+	append pxelinux.cfg/graphics.conf pxelinux.cfg/x86_64_systems.menu
+
+label tools
+	menu label ^Tools (Let me know if you need something here.)
+	kernel vesamenu.c32
+	append pxelinux.cfg/graphics.conf pxelinux.cfg/tools.menu

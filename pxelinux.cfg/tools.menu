@@ -1,0 +1,11 @@
+MENU TITLE Tools Menu (Ask @Tony if you need stuffs added here, I'll do my best)
+
+LABEL Main Menu
+	MENU LABEL Return to the ^Main Menu
+	KERNEL vesamenu.c32
+	APPEND pxelinux.cfg/default
+
+label FedoraRes
+	menu label ^Rescue a Fed^H^H^HLinux system
+	kernel Fedora/vmlinuz_16_32
+	append initrd=Fedora/initrd_16_32.img rescue verbose

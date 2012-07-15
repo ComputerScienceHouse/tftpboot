@@ -1,0 +1,26 @@
+MENU TITLE Fedora (32-bit)
+
+LABEL Main Menu
+	MENU LABEL ^Return to the Main Menu
+	KERNEL vesamenu.c32
+	APPEND pxelinux.cfg/default
+
+LABEL Fedora14
+	menu label Install - Fedora 1^4
+	kernel Fedora/vmlinuz_14_32
+	append initrd=Fedora/initrd_14_32.img LABEL="Fedora 14" repo=http://mirrors.rit.edu/fedora/linux/releases/14/Fedora/i386/os/
+
+label Fedora16
+	menu label Install - Fedora 1^6
+	kernel Fedora/vmlinuz_16_32
+	append initrd=Fedora/initrd_16_32.img repo=http://mirror.rit.edu/fedora/linux/releases/16/Fedora/i386/os/
+
+label Fedora17
+	menu label Install - Fedora 1^6
+	kernel Fedora/vmlinuz_17_32
+	append initrd=Fedora/initrd_17_32.img repo=http://mirror.rit.edu/fedora/linux/releases/17/Fedora/i386/os/
+
+label FedoraRes
+	menu label ^Rescue a Fedora system
+	kernel Fedora/vmlinuz_17_32
+	append initrd=Fedora/initrd_17_32.img rescue verbose

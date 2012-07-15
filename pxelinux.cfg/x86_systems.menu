@@ -1,0 +1,36 @@
+MENU TITLE 32 bit (x86) Systems
+
+LABEL Main Menu
+	MENU LABEL ^Return to the Main Menu
+	KERNEL vesamenu.c32
+	APPEND pxelinux.cfg/default
+
+LABEL Fedora
+	menu label All the ^Fedora
+	kernel vesamenu.c32
+	append pxelinux.cfg/fedora86.menu pxelinux.cfg/graphics.conf
+
+LABEL CentOS
+	menu label Install - ^CentOS
+	kernel CentOS/vmlinuz_6_32
+	append initrd=CentOS/initrd_6_32.img repo="http://mirrors.rit.edu/centos/6.3/os/i386"
+
+label Debian
+	menu label Install - ^Debian Stable
+	kernel vesamenu.c32
+	append Debian/debian-installer/i386/pxelinux.cfg/default
+
+label OpenSUSE
+	menu label Install - ^OpenSUSE
+	kernel OpenSUSE/linux
+	append initrd=OpenSUSE/initrd showopts install=http://mirrors.rit.edu/opensuse/distribution/openSUSE-current/repo/oss/
+
+label Scientific
+	menu label Install - ^Scientific
+	kernel Scientific/vmlinuz_6_32
+	append initrd=Scientific/initrd_6_32.img repo="http://mirrors.rit.edu/scientific/6x/i386/os"
+
+label Elastix
+	menu label Install - ^Elastix
+	kernel Elastix/vmlinuz
+	append initrd=Elastix/initrd.img
