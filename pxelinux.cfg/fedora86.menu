@@ -16,7 +16,7 @@ label Fedora16
 	append initrd=Fedora/initrd_16_32.img repo=http://mirror.rit.edu/fedora/linux/releases/16/Fedora/i386/os/
 
 label Fedora17
-	menu label Install - Fedora 1^6
+	menu label Install - Fedora 1^7
 	kernel Fedora/vmlinuz_17_32
 	append initrd=Fedora/initrd_17_32.img repo=http://mirror.rit.edu/fedora/linux/releases/17/Fedora/i386/os/
 
