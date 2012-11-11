@@ -1,7 +1,7 @@
                   0fWelcome to Debian GNU/Linux!07                                09F107
 
 This is a Debian 6.0 (squeeze) installation netboot image.
-It was built on 20110106+squeeze4.
+It was built on 20110106+squeeze4+b2.
 
 0fHELP INDEX07
 
