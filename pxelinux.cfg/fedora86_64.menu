@@ -20,6 +20,11 @@ label Fedora17
 	kernel Fedora/vmlinuz_17_64
 	append initrd=Fedora/initrd_17_64.img repo=http://mirror.rit.edu/fedora/linux/releases/17/Fedora/x86_64/os
 
+label Fedora18
+	menu label Install - Fedora 1^8
+	kernel Fedora/vmlinuz_18_64
+	append initrd=Fedora/initrd_18_64.img repo=http://mirror.rit.edu/fedora/linux/releases/18/Fedora/x86_64/os
+
 label FedoraRes
 	menu label ^Rescue a Fedora system
 	kernel Fedora/vmlinuz_17_64
