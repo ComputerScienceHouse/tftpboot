@@ -28,7 +28,12 @@ label OpenSUSE
 label Scientific
 	menu label Install - ^Scientific
 	kernel Scientific/vmlinuz_6_32
-	append initrd=Scientific/initrd_6_32.img repo="http://mirrors.rit.edu/scientific/6x/i386/os"
+	append initrd=Scientific/initrd_6_32.img repo="http://mirrors.rit.edu/scientific/6.3/i386/os"
+
+label ScientificRes
+	menu label Rescue an SL Install
+	kernel Scientific/vmlinuz_6_32
+	append initrd=Scientific/initrd_6_32.img resscue verbose
 
 label Elastix
 	menu label Install - ^Elastix
