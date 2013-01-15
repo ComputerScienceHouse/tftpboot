@@ -28,5 +28,4 @@ label OpenSUSE
 label Scientific
 	menu label Install - ^Scientific
 	kernel Scientific/vmlinuz_6_64
-	append initrd=Scientific/initrd_6_64.img repo="http://mirrors.rit.edu/scientific/6x/x86_64/os"
-
+	append initrd=Scientific/initrd_6_64.img repo="http://mirrors.rit.edu/scientific/6.3/x86_64/os"
