@@ -20,6 +20,11 @@ label Debian
 	kernel vesamenu.c32
 	append Debian/debian-installer/i386/pxelinux.cfg/default
 
+label DebianUnstable
+	menu label Install - Debian ^Wheezy
+	kernel vesamenu.c32
+	append Debian/wheezy/debian-installer/i386/pxelinux.cfg/default
+
 label OpenSUSE
 	menu label Install - ^OpenSUSE
 	kernel OpenSUSE/linux
@@ -29,11 +34,6 @@ label Scientific
 	menu label Install - ^Scientific
 	kernel Scientific/vmlinuz_6_32
 	append initrd=Scientific/initrd_6_32.img repo="http://mirrors.rit.edu/scientific/6.3/i386/os"
-
-label ScientificRes
-	menu label Rescue an SL Install
-	kernel Scientific/vmlinuz_6_32
-	append initrd=Scientific/initrd_6_32.img resscue verbose
 
 label Elastix
 	menu label Install - ^Elastix

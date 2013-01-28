@@ -20,6 +20,11 @@ label Debian
 	kernel vesamenu.c32
 	append Debian/debian-installer/amd64/pxelinux.cfg/default
 
+label DebianUnstable
+	menu label Install - Debian ^Unstable
+	kernel vesamenu.c32
+	append Debian/wheezy/debian-installer/amd64/pxelinux.cfg/default
+
 label OpenSUSE
 	menu label Install - ^OpenSUSE
 	kernel OpenSUSE/linux64
