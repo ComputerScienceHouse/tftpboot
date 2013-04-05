@@ -1,7 +1,7 @@
 MENU TITLE Fedora (32-bit)
 
 LABEL Main Menu
-	MENU LABEL ^Return to the Main Menu
+	MENU LABEL Return to the ^Main Menu
 	KERNEL vesamenu.c32
 	APPEND pxelinux.cfg/default
 
@@ -27,5 +27,5 @@ label Fedora18
 
 label FedoraRes
 	menu label ^Rescue a Fedora system
-	kernel Fedora/vmlinuz_17_32
-	append initrd=Fedora/initrd_17_32.img rescue verbose
+	kernel Fedora/vmlinuz_18_32
+	append initrd=Fedora/initrd_18_32.img rescue verbose repo=http://mirror.rit.edu/fedora/linux/releases/18/Fedora/i386/os/

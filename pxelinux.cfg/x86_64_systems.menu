@@ -1,7 +1,7 @@
 MENU TITLE 64 Bit (x86_64) Systems
 
 LABEL Main Menu
-	MENU LABEL ^Return to the Main Menu
+	MENU LABEL Return to the ^Main Menu
 	KERNEL vesamenu.c32
 	APPEND pxelinux.cfg/default
 
