@@ -7,5 +7,5 @@ LABEL Main Menu
 
 label FedoraRes
 	menu label ^Rescue a Fed^H^H^HLinux system
-	kernel Fedora/vmlinuz_16_32
-	append initrd=Fedora/initrd_16_32.img rescue verbose
+	kernel Fedora/vmlinuz_18_32
+	append initrd=Fedora/initrd_18_32.img rescue verbose repo=http://mirror.rit.edu/fedora/linux/releases/18/Fedora/i386/os/

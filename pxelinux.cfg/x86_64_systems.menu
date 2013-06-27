@@ -11,7 +11,7 @@ LABEL Fedora
 	append pxelinux.cfg/fedora86_64.menu pxelinux.cfg/graphics.conf
 
 LABEL CentOS
-	menu label Install - ^CentOS 6.0
+	menu label Install - ^CentOS
 	kernel CentOS/vmlinuz_6_64
 	append initrd=CentOS/initrd_6_64.img repo="http://mirrors.rit.edu/centos/6.3/os/x86_64"
 

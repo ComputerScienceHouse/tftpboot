@@ -1,7 +1,7 @@
 #!/bin/zsh
 if [[ `pwd` != "/tftpboot/Fedora" ]] ; then
 	cd /tftpboot/Fedora/
-fi	
+fi
 
 wget -nc -O initrd_15_32.img "http://mirror.rit.edu/fedora/linux/releases/15/Fedora/i386/os/images/pxeboot/initrd.img"
 wget -nc -O initrd_15_64.img "http://mirror.rit.edu/fedora/linux/releases/15/Fedora/x86_64/os/images/pxeboot/initrd.img"
