@@ -5,27 +5,32 @@ LABEL Main Menu
 	KERNEL vesamenu.c32
 	APPEND pxelinux.cfg/default
 
-Label Fedora14
-	menu label Install - Fedora 1^4
-	kernel Fedora/vmlinuz_14_64
-	append initrd=Fedora/initrd_14_64.img LABEL="Fedora 14" repo=http://mirrors.rit.edu/fedora/linux/releases/14/Fedora/x86_64/os
-
-label Fedora16
-	menu label Install - Fedora 1^6
-	kernel Fedora/vmlinuz_16_64
-	append initrd=Fedora/initrd_16_64.img repo=http://mirror.rit.edu/fedora/linux/releases/16/Fedora/x86_64/os
-
-label Fedora17
-	menu label Install - Fedora 1^7
-	kernel Fedora/vmlinuz_17_64
-	append initrd=Fedora/initrd_17_64.img repo=http://mirror.rit.edu/fedora/linux/releases/17/Fedora/x86_64/os
+label Fedora19
+	menu label Install - Fedora 1^9
+	kernel Fedora/vmlinuz_19_64
+	append initrd=Fedora/initrd_19_64.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/19/Fedora/x86_64/os
 
 label Fedora18
 	menu label Install - Fedora 1^8
 	kernel Fedora/vmlinuz_18_64
 	append initrd=Fedora/initrd_18_64.img repo=http://mirror.rit.edu/fedora/linux/releases/18/Fedora/x86_64/os
 
+label Fedora17
+	menu label Install - Fedora 1^7
+	kernel Fedora/vmlinuz_17_64
+	append initrd=Fedora/initrd_17_64.img repo=http://mirror.rit.edu/fedora/linux/releases/17/Fedora/x86_64/os
+
+label Fedora16
+	menu label Install - Fedora 1^6
+	kernel Fedora/vmlinuz_16_64
+	append initrd=Fedora/initrd_16_64.img repo=http://mirror.rit.edu/fedora/linux/releases/16/Fedora/x86_64/os
+
+Label Fedora14
+	menu label Install - Fedora 1^4
+	kernel Fedora/vmlinuz_14_64
+	append initrd=Fedora/initrd_14_64.img LABEL="Fedora 14" repo=http://mirrors.rit.edu/fedora/linux/releases/14/Fedora/x86_64/os
+
 label FedoraRes
 	menu label ^Rescue a Fedora system
-	kernel Fedora/vmlinuz_18_64
-	append initrd=Fedora/initrd_18_64.img rescue verbose repo=http://mirror.rit.edu/fedora/linux/releases/18/Fedora/x86_64/os
+	kernel Fedora/vmlinuz_19_64
+	append initrd=Fedora/initrd_19_64.img rescue verbose repo=http://mirror.rit.edu/fedora/linux/releases/19/Fedora/x86_64/os
