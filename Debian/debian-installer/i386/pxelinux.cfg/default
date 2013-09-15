@@ -1,5 +1,1 @@
-# D-I config version 2.0
-include Debian/debian-installer/i386/boot-screens/menu.cfg
-default Debian/debian-installer/i386/boot-screens/vesamenu.c32
-prompt 0
-timeout 0
+../boot-screens/syslinux.cfg

@@ -10,27 +10,22 @@ LABEL Fedora
 	kernel vesamenu.c32
 	append pxelinux.cfg/fedora86_64.menu pxelinux.cfg/graphics.conf
 
+label Scientific
+	menu label Install - ^Scientific
+	kernel Scientific/vmlinuz_6_64
+	append initrd=Scientific/initrd_6_64.img repo="http://mirrors.rit.edu/scientific/6.4/x86_64/os"
+
 LABEL CentOS
 	menu label Install - ^CentOS
 	kernel CentOS/vmlinuz_6_64
-	append initrd=CentOS/initrd_6_64.img repo="http://mirrors.rit.edu/centos/6.3/os/x86_64"
+	append initrd=CentOS/initrd_6_64.img repo="http://mirrors.rit.edu/centos/6.4/os/x86_64"
 
 label Debian
 	menu label Install - ^Debian Stable
 	kernel vesamenu.c32
 	append Debian/debian-installer/amd64/pxelinux.cfg/default
 
-label DebianUnstable
-	menu label Install - Debian ^Unstable
-	kernel vesamenu.c32
-	append Debian/wheezy/debian-installer/amd64/pxelinux.cfg/default
-
 label OpenSUSE
 	menu label Install - ^OpenSUSE
 	kernel OpenSUSE/linux64
 	append initrd=OpenSUSE/initrd64 showopts install=http://mirrors.rit.edu/opensuse/distribution/openSUSE-current/repo/oss/
-
-label Scientific
-	menu label Install - ^Scientific
-	kernel Scientific/vmlinuz_6_64
-	append initrd=Scientific/initrd_6_64.img repo="http://mirrors.rit.edu/scientific/6.4/x86_64/os"
