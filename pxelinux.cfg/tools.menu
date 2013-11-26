@@ -9,3 +9,15 @@ label FedoraRes
 	menu label ^Rescue a Fed^H^H^HLinux system
 	kernel Fedora/vmlinuz_18_32
 	append initrd=Fedora/initrd_18_32.img rescue verbose repo=http://mirror.rit.edu/fedora/linux/releases/18/Fedora/i386/os/
+
+label UBCD ISO
+	menu label U^BCD ISO
+	linux memdisk
+	initrd ubcd/ubcd527.iso
+	append iso
+
+label Backtrack 5 (64-Bit)
+	menu label Backtrack ^5 3Gig
+	linux memdisk
+	initrd backtrack/BT5R3-KDE-64.iso
+	append iso
