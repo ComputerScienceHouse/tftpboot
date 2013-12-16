@@ -29,3 +29,14 @@ label OpenSUSE
 	menu label Install - ^OpenSUSE
 	kernel OpenSUSE/linux64
 	append initrd=OpenSUSE/initrd64 showopts install=http://mirrors.rit.edu/opensuse/distribution/openSUSE-current/repo/oss/
+
+label DragonflyBSD
+	menu label Install - DragonflyBSD
+	linux memdisk
+	initrd DragonflyBSD/dfly-x86_64-3.6.0_REL.iso
+	append iso
+label FreeBSD
+	menu label Install - FreeBSD
+	linux memdisk
+	initrd FreeBSD/FreeBSD-9.2-RELEASE-amd64-disc1.iso
+	append iso
