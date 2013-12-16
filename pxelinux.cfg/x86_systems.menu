@@ -40,3 +40,9 @@ label DragonflyBSD
 	linux memdisk
 	initrd DragonflyBSD/dfly-i386-3.6.0_REL.iso
 	append iso
+
+label FreeBSD
+	menu label Install - Free^BSD
+	linux memdisk
+	initrd FreeBSD-9.2-RELEASE-i386-disc1.iso
+	append iso
