@@ -36,7 +36,7 @@ label Elastix
 	append initrd=Elastix/initrd.img
 
 label DragonflyBSD
-	menu label Install Dragon^flyBSD
+	menu label InstalL - dRAGOn^flyBSD
 	linux memdisk
 	initrd DragonflyBSD/dfly-i386-3.6.0_REL.iso
 	append iso
