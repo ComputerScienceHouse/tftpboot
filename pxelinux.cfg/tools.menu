@@ -11,13 +11,24 @@ label FedoraRes
 	append initrd=Fedora/initrd_18_32.img rescue verbose repo=http://mirror.rit.edu/fedora/linux/releases/18/Fedora/i386/os/
 
 label UBCD ISO
-	menu label U^BCD ISO
+	menu label U^BCD ISO 
 	linux memdisk
-	initrd ubcd/ubcd527.iso
+	initrd ubcd/ubcd530.iso
 	append iso
 
 label Backtrack 5 (64-Bit)
 	menu label Backtrack ^5 3Gig
 	linux memdisk
 	initrd backtrack/BT5R3-KDE-64.iso
+	append iso
+
+label SmartOS
+	menu label ^SmartOS
+	kernel SmartOS/platform/i86pc/kernel/amd64/unix
+	append initrd SmartOS/platform/i86pc/amd64/boot_archive
+
+label pfSense
+	menu label ^pfSense
+	linux memdisk
+	initrd pfSense/pfSense-LiveCD-2.1.2-RELEASE-amd64-20140410-0541.iso
 	append iso

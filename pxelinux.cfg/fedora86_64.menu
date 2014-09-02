@@ -5,16 +5,6 @@ LABEL Main Menu
 	KERNEL vesamenu.c32
 	APPEND pxelinux.cfg/default
 
-label Fedora20
-	menu label Install - Fedora ^20
-	kernel Fedora/vmlinuz_20_64
-	append initrd=Fedora/initrd_20_64.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/20/Fedora/x86_64/os
-
-label FedoraRes
-	menu label ^Rescue a Fedora system
-	kernel Fedora/vmlinuz_20_64
-	append initrd=Fedora/initrd_20_64.img rescue verbose repo=http://mirror.rit.edu/fedora/linux/releases/20/Fedora/x86_64/os
-
 label Fedora19
 	menu label Install - Fedora 1^9
 	kernel Fedora/vmlinuz_19_64
@@ -39,3 +29,8 @@ Label Fedora14
 	menu label Install - Fedora 1^4
 	kernel Fedora/vmlinuz_14_64
 	append initrd=Fedora/initrd_14_64.img LABEL="Fedora 14" repo=http://mirrors.rit.edu/fedora/linux/releases/14/Fedora/x86_64/os
+
+label FedoraRes
+	menu label ^Rescue a Fedora system
+	kernel Fedora/vmlinuz_19_64
+	append initrd=Fedora/initrd_19_64.img rescue verbose repo=http://mirror.rit.edu/fedora/linux/releases/19/Fedora/x86_64/os

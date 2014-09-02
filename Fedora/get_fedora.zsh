@@ -27,8 +27,3 @@ wget -nc -O initrd_19_32.img "http://mirror.rit.edu/fedora/fedora/linux/releases
 wget -nc -O initrd_19_64.img "http://mirror.rit.edu/fedora/fedora/linux/releases/19/Fedora/x86_64/os/images/pxeboot/initrd.img"
 wget -nc -O vmlinuz_19_32 "http://mirror.rit.edu/fedora/fedora/linux/releases/19/Fedora/i386/os/images/pxeboot/vmlinuz"
 wget -nc -O vmlinuz_19_64 "http://mirror.rit.edu/fedora/fedora/linux/releases/19/Fedora/x86_64/os/images/pxeboot/vmlinuz"
-
-wget -nc -O initrd_20_32.img "http://mirror.rit.edu/fedora/fedora/linux/releases/20/Fedora/i386/os/images/pxeboot/initrd.img"
-wget -nc -O initrd_20_64.img "http://mirror.rit.edu/fedora/fedora/linux/releases/20/Fedora/x86_64/os/images/pxeboot/initrd.img"
-wget -nc -O vmlinuz_20_32 "http://mirror.rit.edu/fedora/fedora/linux/releases/20/Fedora/i386/os/images/pxeboot/vmlinuz"
-wget -nc -O vmlinuz_20_64 "http://mirror.rit.edu/fedora/fedora/linux/releases/20/Fedora/x86_64/os/images/pxeboot/vmlinuz"

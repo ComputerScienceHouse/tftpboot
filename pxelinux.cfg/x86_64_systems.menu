@@ -11,14 +11,14 @@ LABEL Fedora
 	append pxelinux.cfg/fedora86_64.menu pxelinux.cfg/graphics.conf
 
 label Scientific
-	menu label Install - ^Scientific-6.5
+	menu label Install - ^Scientific
 	kernel Scientific/vmlinuz_6_64
-	append initrd=Scientific/initrd_6_64.img repo="http://mirrors.rit.edu/scientific/6.5/x86_64/os"
+	append initrd=Scientific/initrd_6_64.img repo="http://mirrors.rit.edu/scientific/6.4/x86_64/os"
 
 LABEL CentOS
-	menu label Install - ^CentOS-6.5
+	menu label Install - ^CentOS
 	kernel CentOS/vmlinuz_6_64
-	append initrd=CentOS/initrd_6_64.img repo="http://mirrors.rit.edu/centos/6.5/os/x86_64"
+	append initrd=CentOS/initrd_6_64.img repo="http://mirrors.rit.edu/centos/6.4/os/x86_64"
 
 label Debian
 	menu label Install - ^Debian Stable
@@ -35,7 +35,6 @@ label DragonflyBSD
 	linux memdisk
 	initrd DragonflyBSD/dfly-x86_64-3.6.0_REL.iso
 	append iso
-
 label FreeBSD
 	menu label Install - Free^BSD
 	linux memdisk
