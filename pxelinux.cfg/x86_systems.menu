@@ -10,10 +10,20 @@ LABEL Fedora
 	kernel vesamenu.c32
 	append pxelinux.cfg/fedora86.menu pxelinux.cfg/graphics.conf
 
-LABEL CentOS
-	menu label Install - ^CentOS
+LABEL CentOS6
+	menu label Install - ^CentOS_6.5
 	kernel CentOS/vmlinuz_6_32
-	append initrd=CentOS/initrd_6_32.img repo="http://mirrors.rit.edu/centos/6.4/os/i386"
+	append initrd=CentOS/initrd_6_32.img repo="http://mirrors.rit.edu/centos/6.5/os/i386"
+
+label CentOS7
+    menu label Install - CentOS ^7
+    kernel CentOS/vmlinux_7_32
+    append initrd=CentOS/initrd_7_32.img repo="http://mirrors.rit.edu/centos/7/os/i386"
+
+label Scientific
+	menu label Install - ^Scientific-6.5
+	kernel Scientific/vmlinuz_6_32
+	append initrd=Scientific/initrd_6_32.img repo="http://mirrors.rit.edu/scientific/6.5/i386/os"
 
 label Debian
 	menu label Install - ^Debian Stable
@@ -24,11 +34,6 @@ label OpenSUSE
 	menu label Install - ^OpenSUSE
 	kernel OpenSUSE/linux
 	append initrd=OpenSUSE/initrd showopts install=http://mirrors.rit.edu/opensuse/distribution/openSUSE-current/repo/oss/
-
-label Scientific
-	menu label Install - ^Scientific
-	kernel Scientific/vmlinuz_6_32
-	append initrd=Scientific/initrd_6_32.img repo="http://mirrors.rit.edu/scientific/6.4/i386/os"
 
 label Elastix
 	menu label Install - ^Elastix
