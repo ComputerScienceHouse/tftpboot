@@ -5,32 +5,17 @@ LABEL Main Menu
 	KERNEL vesamenu.c32
 	APPEND pxelinux.cfg/default
 
+label Fedora20
+	menu label Install - Fedora 2^0
+	kernel Fedora/vmlinuz_20_32
+	append initrd=Fedora/initrd_20_32.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/20/Fedora/i386/os/
+
 label Fedora19
 	menu label Install - Fedora 1^9
 	kernel Fedora/vmlinuz_19_32
 	append initrd=Fedora/initrd_19_32.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/19/Fedora/i386/os/
 
-label Fedora18
-	menu label Install - Fedora 1^8
-	kernel Fedora/vmlinuz_18_32
-	append initrd=Fedora/initrd_18_32.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/18/Fedora/i386/os/
-
-label Fedora17
-	menu label Install - Fedora 1^7
-	kernel Fedora/vmlinuz_17_32
-	append initrd=Fedora/initrd_17_32.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/17/Fedora/i386/os
-
-label Fedora16
-	menu label Install - Fedora 1^6
-	kernel Fedora/vmlinuz_16_32
-	append initrd=Fedora/initrd_16_32.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/16/Fedora/i386/os
-
-LABEL Fedora14
-	menu label Install - Fedora 1^4
-	kernel Fedora/vmlinuz_14_32
-	append initrd=Fedora/initrd_14_32.img LABEL="Fedora 14" repo=http://mirrors.rit.edu/fedora/fedora/linux/releases/14/Fedora/i386/os
-
 label FedoraRes
 	menu label ^Rescue a Fedora system
-	kernel Fedora/vmlinuz_19_32
-	append initrd=Fedora/initrd_19_32.img rescue verbose repo=http://mirror.rit.edu/fedora/fedora/linux/releases/19/Fedora/i386/os/
+	kernel Fedora/vmlinuz_20_32
+	append initrd=Fedora/initrd_20_32.img rescue verbose repo=http://mirror.rit.edu/fedora/fedora/linux/releases/20/Fedora/i386/os/

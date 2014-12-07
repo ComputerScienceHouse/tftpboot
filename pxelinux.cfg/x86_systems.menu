@@ -5,49 +5,44 @@ LABEL Main Menu
 	KERNEL vesamenu.c32
 	APPEND pxelinux.cfg/default
 
+LABEL Arch
+	menu label Install - ^Arch Linux
+	kernel Arch/vmlinuz_i686
+	append initrd=Arch/initramfs_i686.img devfs=nomount
+
+LABEL CentOS6
+	menu label Install - ^CentOS_6.6
+	kernel CentOS/vmlinuz_6_32
+	append initrd=CentOS/initrd_6_32.img repo="http://mirrors.rit.edu/centos/6.6/os/i386"
+
+#label Debian
+#	menu label Install - ^Debian Stable
+#	kernel vesamenu.c32
+#	append Debian/debian-installer/i386/pxelinux.cfg/default
+
 LABEL Fedora
-	menu label All the ^Fedora
+	menu label Install - ^Fedora
 	kernel vesamenu.c32
 	append pxelinux.cfg/fedora86.menu pxelinux.cfg/graphics.conf
 
-LABEL CentOS6
-	menu label Install - ^CentOS_6.5
-	kernel CentOS/vmlinuz_6_32
-	append initrd=CentOS/initrd_6_32.img repo="http://mirrors.rit.edu/centos/6.5/os/i386"
+#label FreeBSD
+#	menu label Install - Free^BSD 10.1
+#	linux memdisk
+#	initrd FreeBSD/FreeBSD-10.1-RELEASE-i386-bootonly.iso
+#	append iso
 
-label CentOS7
-    menu label Install - CentOS ^7
-    kernel CentOS/vmlinux_7_32
-    append initrd=CentOS/initrd_7_32.img repo="http://mirrors.rit.edu/centos/7/os/i386"
-
-label Scientific
-	menu label Install - ^Scientific-6.5
-	kernel Scientific/vmlinuz_6_32
-	append initrd=Scientific/initrd_6_32.img repo="http://mirrors.rit.edu/scientific/6.5/i386/os"
-
-label Debian
-	menu label Install - ^Debian Stable
-	kernel vesamenu.c32
-	append Debian/debian-installer/i386/pxelinux.cfg/default
+#label OpenBSD
+#	menu label Install - Open^BSD 5.6
+#	linux memdisk
+#	initrd OpenBSD/openbsd-i386-5.6.iso
+#	append iso
 
 label OpenSUSE
 	menu label Install - ^OpenSUSE
 	kernel OpenSUSE/linux
 	append initrd=OpenSUSE/initrd showopts install=http://mirrors.rit.edu/opensuse/distribution/openSUSE-current/repo/oss/
 
-label Elastix
-	menu label Install - ^Elastix
-	kernel Elastix/vmlinuz
-	append initrd=Elastix/initrd.img
-
-label DragonflyBSD
-	menu label Install - Dragon^flyBSD
-	linux memdisk
-	initrd DragonflyBSD/dfly-i386-3.6.0_REL.iso
-	append iso
-
-label FreeBSD
-	menu label Install - Free^BSD
-	linux memdisk
-	initrd FreeBSD-9.2-RELEASE-i386-disc1.iso
-	append iso
+label Scientific
+	menu label Install - ^Scientific-6.6
+	kernel Scientific/vmlinuz_6_32
+	append initrd=Scientific/initrd_6_32.img repo="http://mirrors.rit.edu/scientific/6.6/i386/os"

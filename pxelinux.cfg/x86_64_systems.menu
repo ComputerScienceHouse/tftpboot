@@ -5,50 +5,49 @@ LABEL Main Menu
 	KERNEL vesamenu.c32
 	APPEND pxelinux.cfg/default
 
+LABEL Arch
+	menu label Install - ^Arch Linux
+	kernel Arch/vmlinuz_x86_64
+	append initrd=Arch/initramfs_x86_64.img devfs=nomount
+
+LABEL CentOS6
+	menu label Install - ^CentOS-6.6
+	kernel CentOS/vmlinuz_6_64
+	append initrd=CentOS/initrd_6_64.img repo="http://mirrors.rit.edu/centos/6.6/os/x86_64"
+
+label CentOS7
+	menu label Install - CentOS-^7
+	kernel CentOS/vmlinuz_7_64
+	append initrd=CentOS/initrd_7_64.img repo="http://mirrors.rit.edu/centos/7/os/x86_64"
+
+#label Debian
+#	menu label Install - ^Debian Stable
+#	kernel vesamenu.c32
+#	append Debian/debian-installer/amd64/pxelinux.cfg/default
+
 LABEL Fedora
-	menu label All the ^Fedora
+	menu label Install - ^Fedora
 	kernel vesamenu.c32
 	append pxelinux.cfg/fedora86_64.menu pxelinux.cfg/graphics.conf
 
-label Scientific
-	menu label Install - ^Scientific-6.5
-	kernel Scientific/vmlinuz_6_64
-	append initrd=Scientific/initrd_6_64.img repo="http://mirrors.rit.edu/scientific/6.5/x86_64/os"
+#label FreeBSD
+#	menu label Install - Free^BSD 10.1
+#	linux memdisk
+#	initrd FreeBSD/FreeBSD-10.1-RELEASE-x86_64-bootonly.iso
+#	append iso
 
-LABEL CentOS6
-	menu label Install - ^CentOS-6.5
-	kernel CentOS/vmlinuz_6_64
-	append initrd=CentOS/initrd_6_64.img repo="http://mirrors.rit.edu/centos/6.5/os/x86_64"
-
-label CentOS7
-    menu label Install - CentOS-^7
-    kernel Centos/vmlinuz_7_64
-    append initrd=Centos/initrd_7_64.img repo="http://mirrors.rit.edu/centos/7/os/x86_64"
-
-label Debian
-	menu label Install - ^Debian Stable
-	kernel vesamenu.c32
-	append Debian/debian-installer/amd64/pxelinux.cfg/default
-
-label SecurityOnion
-	menu label Install - Security ^Onion
-	linux memdisk
-	initrd securityonion-12.04.3-20130904.iso
-	append iso
+#label OpenBSD
+#	menu label Install - Open^BSD 5.6
+#	linux memdisk
+#	initrd OpenBSD/openbsd-amd64-5.6.iso
+#	append iso
 
 label OpenSUSE
 	menu label Install - ^OpenSUSE
 	kernel OpenSUSE/linux64
 	append initrd=OpenSUSE/initrd64 showopts install=http://mirrors.rit.edu/opensuse/distribution/openSUSE-current/repo/oss/
 
-label DragonflyBSD
-	menu label Install - Dragon^flyBSD
-	linux memdisk
-	initrd DragonflyBSD/dfly-x86_64-3.6.0_REL.iso
-	append iso
-
-label FreeBSD
-	menu label Install - Free^BSD
-	linux memdisk
-	initrd FreeBSD/FreeBSD-9.2-RELEASE-amd64-disc1.iso
-	append iso
+label Scientific
+	menu label Install - ^Scientific-6.6
+	kernel Scientific/vmlinuz_6_64
+	append initrd=Scientific/initrd_6_64.img repo="http://mirrors.rit.edu/scientific/6.6/x86_64/os"
