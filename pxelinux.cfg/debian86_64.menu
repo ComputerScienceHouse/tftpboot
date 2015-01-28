@@ -1,0 +1,17 @@
+MENU TITLE Fedora (64-bit)
+
+LABEL Main Menu
+	MENU LABEL Return to the ^Main Menu
+	KERNEL vesamenu.c32
+	APPEND pxelinux.cfg/default
+
+label DebianSqueeze
+	menu label Install - ^Debian Squeeze 6
+	kernel Debian/squeeze/debian-installer/amd64/linux
+	append vga=788 initrd=Debian/squeeze/debian-installer/amd64/initrd.gz -- quiet
+
+label DebianWheezy
+	menu label Install - ^Debian Wheezy 7
+	kernel Debian/wheezy/debian-installer/amd64/linux
+	append vga=788 initrd=Debian/wheezy/debian-installer/amd64/initrd.gz -- quiet
+

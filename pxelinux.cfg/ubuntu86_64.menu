@@ -1,0 +1,26 @@
+MENU TITLE Fedora (64-bit)
+
+LABEL Main Menu
+	MENU LABEL Return to the ^Main Menu
+	KERNEL vesamenu.c32
+	APPEND pxelinux.cfg/default
+
+label UbuntuPrecise
+	menu label Install - ^Ubuntu Precise 12.04
+	kernel Ubuntu/precise/ubuntu-installer/amd64/linux
+        append vga=788 initrd=Ubuntu/precise/ubuntu-installer/amd64/initrd.gz -- quiet
+
+label UbuntuSaucy
+	menu label Install - ^Ubuntu Saucy 13.10
+	kernel Ubuntu/saucy/ubuntu-installer/amd64/linux
+        append vga=788 initrd=Ubuntu/saucy/ubuntu-installer/amd64/initrd.gz -- quiet
+
+label UbuntuTrusty
+	menu label Install - ^Ubuntu Trusty 14.04
+	kernel Ubuntu/trusty/ubuntu-installer/amd64/linux
+        append vga=788 initrd=Ubuntu/trusty/ubuntu-installer/amd64/initrd.gz -- quiet
+
+label UbuntuUtopic
+	menu label Install - ^Ubuntu Utopic 14.10
+	kernel Ubuntu/utopic/ubuntu-installer/amd64/linux
+        append vga=788 initrd=Ubuntu/utopic/ubuntu-installer/amd64/initrd.gz -- quiet

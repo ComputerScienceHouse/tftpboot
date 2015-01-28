@@ -20,10 +20,15 @@ label CentOS7
 	kernel CentOS/vmlinuz_7_64
 	append initrd=CentOS/initrd_7_64.img repo="http://mirrors.rit.edu/centos/7/os/x86_64"
 
-#label Debian
-#	menu label Install - ^Debian Stable
-#	kernel vesamenu.c32
-#	append Debian/debian-installer/amd64/pxelinux.cfg/default
+LABEL Debian
+	menu label Install - ^Debian (Netboot)
+	kernel vesamenu.c32
+	append pxelinux.cfg/debian86_64.menu pxelinux.cfg/graphics.conf
+
+LABEL Ubuntu
+	menu label Install - ^Ubuntu (Netboot)
+	kernel vesamenu.c32
+	append pxelinux.cfg/ubuntu86_64.menu pxelinux.cfg/graphics.conf
 
 LABEL Fedora
 	menu label Install - ^Fedora
