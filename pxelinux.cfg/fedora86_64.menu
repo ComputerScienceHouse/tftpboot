@@ -5,15 +5,25 @@ LABEL Main Menu
 	KERNEL vesamenu.c32
 	APPEND pxelinux.cfg/default
 
-label Fedora20
-	menu label Install - Fedora 2^0
-	kernel Fedora/vmlinuz_20_64
-	append initrd=Fedora/initrd_20_64.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/20/Fedora/x86_64/os
+label Fedora22W
+    menu label Install - Fedora 2^2 Workstation
+    kernel http://mirror.rit.edu/fedora/fedora/linux/releases/22/Workstation/x86_64/os/images/pxeboot/vmlinuz
+    append initrd=http://mirror.rit.edu/fedora/fedora/linux/releases/22/Workstation/x86_64/os/images/pxeboot/initrd.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/22/Workstation/x86_64/os/
 
-label Fedora19
-	menu label Install - Fedora 1^9
-	kernel Fedora/vmlinuz_19_64
-	append initrd=Fedora/initrd_19_64.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/19/Fedora/x86_64/os
+label Fedora22S
+    menu label Install - Fedora 22 Server
+    kernel http://mirror.rit.edu/fedora/fedora/linux/releases/22/Server/x86_64/os/images/pxeboot/vmlinuz
+    append initrd=http://mirror.rit.edu/fedora/fedora/linux/releases/22/Server/x86_64/os/images/pxeboot/initrd.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/22/Server/x86_64/os/
+
+label Fedora21W
+    menu label Install - Fedora 2^1 Workstation
+    kernel http://mirror.rit.edu/fedora/fedora/linux/releases/21/Workstation/x86_64/os/images/pxeboot/vmlinuz
+    append initrd=http://mirror.rit.edu/fedora/fedora/linux/releases/21/Workstation/x86_64/os/images/pxeboot/initrd.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/21/Workstation/x86_64/os/
+
+label Fedora21S
+    menu label Install - Fedora 21 Server
+    kernel http://mirror.rit.edu/fedora/fedora/linux/releases/21/Server/x86_64/os/images/pxeboot/vmlinuz
+    append initrd=http://mirror.rit.edu/fedora/fedora/linux/releases/21/Server/x86_64/os/images/pxeboot/initrd.img repo=http://mirror.rit.edu/fedora/fedora/linux/releases/21/Server/x86_64/os/
 
 label FedoraRes
 	menu label ^Rescue a Fedora system
