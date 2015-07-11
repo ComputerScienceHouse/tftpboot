@@ -24,3 +24,13 @@ label UbuntuUtopic
 	menu label Install - ^Ubuntu Utopic 14.10
 	kernel Ubuntu/utopic/ubuntu-installer/amd64/linux
         append vga=788 initrd=Ubuntu/utopic/ubuntu-installer/amd64/initrd.gz -- quiet
+
+label UbuntuVivid
+    menu label Install - ^Ubuntu Vivid 15.04
+    kernel vesamenu.c32
+        append http://mirror.rit.edu/ubuntu/dists/vivid/main/installer-amd64/current/images/netboot/pxelinux.cfg/default
+
+label UbuntuWily
+    menu label Install - ^Ubuntu Wily 15.10
+    kernel vesamenu.c32
+        append http://mirror.rit.edu/ubuntu/dists/wily/main/installer-amd64/current/images/netboot/pxelinux.cfg/default
